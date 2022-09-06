@@ -34,7 +34,7 @@ These files follow [python coding guide lines](https://github.com/davidreklaw/Py
 
 ### Crypto.py
 
-This file is following a [Tech With Tim Video](https://www.youtube.com/watch?v=lC6mucyD17k&t=517s) and uses [CodeMarketCap](https://coinmarketcap.com/) to get crypto prices
+This file is following a [Tech With Tim Video](https://www.youtube.com/watch?v=lC6mucyD17k&t=517s) and uses [CoinMarketCap](https://coinmarketcap.com/) to get crypto prices
 
 Challenges:
 - After about 10 rows in the table data is stored in the html differently and had to be extracted differently. The video example only goes through the first 10
