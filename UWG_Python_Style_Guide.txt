@@ -1,0 +1,79 @@
+Provided by Dr. Ana Stanescu, Professor at the University of West Georgia
+
+UWG Python Style Guide
+
+Code Organization
+
+1. In Linux, the first line in an executable script is the shebang, specifying the version of Python your script uses: #!/usr/bin/env python3
+	a. Not applicable for Windows, as Windows does not offer shebang support.
+
+2. Next, the script should include docstrings and module comments, followed by imports.
+
+3. Use import statements for packages and modules only, not for individual classes or functions. You can also rename an imported resource, e.g., import numpy as np.
+	a. Imports should be divided as follows:
+		i. standard library imports (Python’s built-in modules, e.g., numpy)
+		ii. related third party imports (modules that are installed and do not belong to the current application, e.g., pandas)
+		iii. local application imports (modules that belong to the current application)
+		iv. each group of imports should be separated by a blank space
+	b. Generally, absolute imports are preferred over relative imports.
+	c. Do not use from package import * as it causes a reduction in code readability (it is allowed only in interactive Python sessions)
+
+4. Include author, version, and pylint dunders (double underscore):
+	__author__ = “Your first name and your last name”
+	__version__ = “Semester, or a date, or a version, etc.”
+	__pylint__ = “Version x.x.x”
+
+5. The body of the script should then contain:
+	a. Variable declerations
+	b. function definitions
+	c. Program code if the script is runnable:
+		if __name__ = '__main__':
+			main()
+
+6. Operators must be surrounded by spaces and multiple arguments must be separated by a comma followed by a space, e.g.:
+	a. x = y + 5
+	b. function_name(arg1, arg2)
+
+7. Naming Conventions
+   module_name, package_name, ClassName, method_name, ExceptionName, function_name, GLOBAL_CONSTANT_NAME, global_var_name, instance_var_name, function_parameter_name, local_var_name.
+	a. Always use a .py filename extension. Filenames must not contain dashes.
+	b. Function names, variable names, and file names should be descriptive and indicative of their purpose. In particular: 
+		i. Noun phrases for variables
+		ii. Verb phrases for functions (methods if you are writing a class)
+	c. Do not use abbreviations that are ambiguous or unfamiliar to readers outside your project, and do not abbreviate by deleting letters within a word.
+	d. Avoid single character names except for counters or iterators.
+		i. You may use "e" as an exception identifier in try/except statements
+	e. Avoid dashes (-) in package/module names.
+	f. Avoid leading and trailing underscores. Note that __double_leading and trailing_underscores__ names are reserved by Python.
+
+General Guidelines
+
+8. Prefer small and focused functions. Longer (than 25 lines) functions may be appropriate sometimes, but a hard limit is placed on function length: if a function exceeds 50 lines, think about how it can be broken up without harming the structure of the program. Even if your long (> 25) function works perfectly now, someone modifying it in a few months may add new behavior. This could result in bugs that are hard to find. Keeping your functions short and simple makes it easier for other people (including your future self) to read and modify the code.
+
+
+
+Example Script
+
+#!/usr/bin/env python3
+"""
+A simple example of an executable Python script from Leacture x.
+
+If the description of the script is too long and spans lines,
+then the first line should be a short summary, like we did above.
+It should make sense on its own, and be separated from the rest
+of the comments.
+"""
+
+import sys
+
+__author__ = ‘CS xxxx’
+__version__ = ‘Fall/Spring 20xx’
+__pylint__ = ‘x.x.x’
+
+def print_sys_version():
+	""" fetches info about Python"""
+	print('The version of python used is:')
+	print(sys.version)
+
+if __name__ == '__main__':
+	print_sys_version()
