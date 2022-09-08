@@ -7,6 +7,7 @@ __version__ = "09/27/2018"
 __pylint__ = "2.12.2"
 
 def get_fib():
+    """Gets the fibonacci sequence"""
     count = int(input("How many fibonacci numbers would you like to generate? "))
 
     i = 1

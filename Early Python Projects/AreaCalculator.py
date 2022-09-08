@@ -1,8 +1,8 @@
-import math
-
 """
 This is a program that will help in the calculations of areas of a shape
 """
+
+import math
 
 __author__ = "David Walker"
 __version__ = "10/20/2018"
@@ -14,12 +14,14 @@ if __name__ == '__main__':
     if option == 'C':
         radius = float(input("Enter Radius: "))
         area = math.pi * radius ** 2
-        print('Area: %f' %area)
+        print('Area: {area}')
     elif option == 'T':
-        base = float = float(input("enter Base of Triangle: "))
-        height = float(input("Enter Height of Triangle: "))
+        base = input("enter Base of Triangle: ")
+        base = float(base)
+        height = input("Enter Height of Triangle: ")
+        height = float(height)
         area = 0.5 * base * height
-        print('Area: %f' %area)
+        print('Area: {area}')
     else:
         print("Invalid! Shape does not exist!")
     print("Exiting...")

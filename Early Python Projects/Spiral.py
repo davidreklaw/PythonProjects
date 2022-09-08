@@ -1,8 +1,8 @@
-import turtle
-
 """
 Using the turtle module, a spiral will be drawn
 """
+
+import turtle
 
 __author__  = "David Walker"
 __version__ = "10/18/2018"
@@ -20,3 +20,4 @@ if __name__ == '__main__':
         turtle.color(colors[x %4])
         turtle.left(91)
         turtle.tracer(True)
+        

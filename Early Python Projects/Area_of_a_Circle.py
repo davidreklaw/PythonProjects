@@ -8,6 +8,7 @@ __pylint__ = "2.12.2"
 
 if __name__ == '__main__':
     radius = float(input("What is the radius of the circle?"))
-    pi = 3.14159
-    area = pi * radius ** 2
+    PI = 3.14159
+    area = PI * radius ** 2
     print("The area of the circle is ", area)
+    
