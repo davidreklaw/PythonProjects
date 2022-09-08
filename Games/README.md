@@ -16,7 +16,7 @@ These files follow python coding guide lines from coding roles given at the Univ
 
 ### Rock_Paper_Scissors_Lizard_Spock.py
 
-This is the popular game Rock-Paper-Scissors-Lizard-Spock as mentioned in [The Big Bang Theory](). The rules will be printed on screen the the player will pick one thing and the computer will randomly generate another.
+This is the popular game Rock-Paper-Scissors-Lizard-Spock as mentioned in [The Big Bang Theory](https://www.youtube.com/watch?v=x5Q6-wMx-K8). The rules will be printed on screen the the player will pick one thing and the computer will randomly generate another.
 
 ### Rock_Paper_Scissors_v1.py
 
