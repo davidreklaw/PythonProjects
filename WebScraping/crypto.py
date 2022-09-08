@@ -1,6 +1,3 @@
-import requests
-from bs4 import BeautifulSoup
-
 """
 Tutorial following Tech With Time vide:
 
@@ -9,6 +6,10 @@ Beautiful Soup 4 Tutorial #3 - Navigating The HTML Tree
 Link:
 https://www.youtube.com/watch?v=lC6mucyD17k
 """
+
+import requests
+from bs4 import BeautifulSoup
+
 __author__ = "David Walker"
 __version__ = "Web Scraping Tutorial"
 __pylint__ = "2.12.2"
@@ -16,12 +17,12 @@ __pylint__ = "2.12.2"
 
 if __name__ == '__main__':
 
-    url = "https://coinmarketcap.com/"
-    result = requests.get(url).text
+    URL = "https://coinmarketcap.com/"
+    result = requests.get(URL).text
     doc = BeautifulSoup(result, "html.parser")
 
     tbody = doc.tbody
-    
+
     trs = tbody.contents
 
     prices = {}
