@@ -1,45 +1,41 @@
-import sys
-import random
-
 """
 The game of rock, paper, scissors
 """
+
+import random
 
 __author__ = "David Walker"
 __version__ = "02/15/2019"
 __pylint__ = "2.12.2"
 
-def compare(u1, u2):
-    if u1 == u2:
-        return("It's a tie!")
-    elif u1 == 'rock':
-        if u2 == 'scissors':
-            return("%s, you win!" %user1)
-        else:
-            return("%s, you lose!" %user1)
-    elif u1 == 'scissors':
-        if u2 == 'paper':
-            return("%s, you win!" %user1)
-        else:
-            return("%s, you lose!" %user1)
-    elif u1 == 'paper':
-        if u2 == 'rock':
-            return("%s, you win!" %user1)
-        else:
-            return("%s, you lose!" %user1)
-    else:
-        return("Invalid input! You have not entered rock, paper or scissors, try again.")
+def compare(user1answer, user2):
+    """Compares answers and determines a winner"""
+    if user1answer == user2:
+        return "It's a tie!"
+    if user1answer == 'rock':
+        if user2 == 'scissors':
+            return "{user1}, you win!"
+        return "{user1}, you lose!"
+    if user1answer == 'scissors':
+        if user2 == 'paper':
+            return "{user1}, you win!"
+        return "{user1}, you lose!"
+    if user1answer == 'paper':
+        if user2 == 'rock':
+            return "{user1}, you win!"
+        return "{user1}, you lose!"
+    return "Invalid input! You have not entered rock, paper or scissors, try again."
 
 if __name__ == '__main__':
     user1 = input("What's your name?")
-    user1_answer = input('%s, do you want to chose rock, paper, or scissors?' %user1)
-    user2_answer = random.randint(0,3)
-    if user2_answer == 1:
-        user2_answer = 'rock'
-    elif user2_answer == 2:
-        user2_answer = 'paper'
+    user1_answer = input('{user1}, do you want to chose rock, paper, or scissors?')
+    USER2ANSWER = random.randint(0,3)
+    if USER2ANSWER == 1:
+        USER2ANSWER = 'rock'
+    elif USER2ANSWER == 2:
+        USER2ANSWER = 'paper'
     else:
-        user2_answer = 'scissors'
+        USER2ANSWER = 'scissors'
 
-    print("The computer picks %s" %user2_answer)
-    print(compare(user1_answer, user2_answer))
+    print("The computer picks {user2_answer}")
+    print(compare(user1_answer, USER2ANSWER))

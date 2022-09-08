@@ -1,18 +1,16 @@
-import random as r
-
 """
 Rock Paper Scissors with score keeping
 """
+
+import random as r
 
 __author__ = "David Walker"
 __version__ = "01/12/2022"
 __pylint__ = "2.12.2"
 
 def print_score():
-        """
-        Prints score
-        """
-        print(F"""Score:
+    """Prints score"""
+    print(F"""Score:
 Player: {PLAYER}
 Computer: {OPPONENT}
 Cat: {CAT}\n""")
@@ -61,3 +59,4 @@ if __name__ == '__main__':
 
         userinput = input("Play again? y/n\t")
         CONT = userinput
+        

@@ -7,32 +7,34 @@ __version__ = "10/25/2018"
 __pylint__ = "2.12.2"
 
 def showInstructions():
-  print('''
-RPG Game
-========
+    """Shows the instructions"""
+    print('''
+  RPG Game
+  ========
 
-Get to the Garden with a key and a potion
-Avoid the monster!
+  Get to the Garden with a key and a potion
+  Avoid the monster!
 
-Commands:
-  go [direction]
-  get [item]
-''')
+  Commands:
+    go [direction]
+    get [item]
+  ''')
 
 def showStatus():
-  print('---------------------------')
-  print('You are in the ' + currentRoom)
-  print('Inventory : ' + str(inventory))
-  if "item" in rooms[currentRoom]:
-    print('You see a ' + rooms[currentRoom]['item'])
-  print("---------------------------")
+    """Shows the stats of the game"""
+    print('---------------------------')
+    print('You are in the ' + CURRENTROOM)
+    print('Inventory : ' + str(inventory))
+    if "item" in rooms[CURRENTROOM]:
+        print('You see a ' + rooms[CURRENTROOM]['item'])
+    print("---------------------------")
 
 if __name__ == '__main__':
     inventory = []
 
     rooms = {
 
-            'Hall' : { 
+            'Hall' : {
                   'south' : 'Kitchen',
                   'east' : 'Dining Room',
                   'item' : 'key'
@@ -54,40 +56,38 @@ if __name__ == '__main__':
 
          }
 
-    currentRoom = 'Hall'
+    CURRENTROOM = 'Hall'
 
     showInstructions()
 
     while True:
-    
+
         showStatus()
 
-        move = ''
-        while move == '':  
-            move = input('>')
-            
-        move = move.lower().split()
+        MOVE = ''
+        while MOVE == '':
+            MOVE = input('>')
 
-        if move[0] == 'go':
-            if move[1] in rooms[currentRoom]:
-                currentRoom = rooms[currentRoom][move[1]]
+        MOVE = MOVE.lower().split()
+
+        if MOVE[0] == 'go':
+            if MOVE[1] in rooms[CURRENTROOM]:
+                CURRENTROOM = rooms[CURRENTROOM][MOVE[1]]
             else:
                 print('You can\'t go that way!')
 
-        if move[0] == 'get' :
-            if "item" in rooms[currentRoom] and move[1] in rooms[currentRoom]['item']:
-                inventory += [move[1]]
-                print(move[1] + ' got!')
-                del rooms[currentRoom]['item']
+        if MOVE[0] == 'get' :
+            if "item" in rooms[CURRENTROOM] and MOVE[1] in rooms[CURRENTROOM]['item']:
+                inventory += [MOVE[1]]
+                print(MOVE[1] + ' got!')
+                del rooms[CURRENTROOM]['item']
             else:
-                print('Can\'t get ' + move[1] + '!')
+                print('Can\'t get ' + MOVE[1] + '!')
 
-        if 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item']:
+        if 'item' in rooms[CURRENTROOM] and 'monster' in rooms[CURRENTROOM]['item']:
             print('A monster has got you... GAME OVER!')
             break
 
-        if currentRoom == 'Garden' and 'key' in inventory and 'potion' in inventory:
+        if CURRENTROOM == 'Garden' and 'key' in inventory and 'potion' in inventory:
             print('You escaped the house... YOU WIN!')
             break
-
-
