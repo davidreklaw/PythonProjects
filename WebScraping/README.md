@@ -53,3 +53,11 @@ Challenges:
 
 Differences:
 - Using **BeautifulSoup** and **Pandas**, is that Pandas uses can automatically pull all the tables separately and **all** of the information in those tables and displays it easily in the console. Also, for relay participants and splits for the athletes, Pandas pull that information when BeautifulSoup does not.
+
+BeautifulSoup:
+
+![beautifulsoup](https://user-images.githubusercontent.com/95205242/189502266-63438019-116d-4a93-b6c6-dd3dd8f301fb.jpg)
+
+Pandas:
+
+![pandas](https://user-images.githubusercontent.com/95205242/189502269-fd29eec7-2a27-4738-94df-153edd0b6961.jpg)
