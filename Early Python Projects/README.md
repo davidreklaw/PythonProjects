@@ -22,7 +22,7 @@ A lot of these files explore the basics of programming (basic data types, functi
 
 ### Area_of_a_Circle.py
 
-This files is a simple that calculates the area of a circle given radius.
+This files is a simple script that calculates the area of a circle given radius.
 
 ### AreaCalculator.py
 
