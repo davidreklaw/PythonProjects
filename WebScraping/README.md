@@ -42,7 +42,7 @@ These files follow [python coding guide lines](https://github.com/davidreklaw/Py
 This file is following a [Tech With Tim Video](https://www.youtube.com/watch?v=lC6mucyD17k&t=517s) and uses [CoinMarketCap](https://coinmarketcap.com/) to get crypto prices
 
 Challenges:
-- After about 10 rows in the table data is stored in the html differently and had to be extracted differently. The video example only goes through the first 10
+- After about 10 rows in the table, data is stored in the html differently and had to be extracted differently. The video example only goes through the first 10
 
 ### MensWorldRecords.py and MensWRFast.py
 
@@ -52,7 +52,7 @@ Challenges:
 - The biggest challenge was the fact that there were multiple tables to pull information from unlike the previous script that was pulling information from just a single table. And since the different tables didn't have a summery tag or a differentiating tag for each table I had to get a little creative. 
 
 Differences:
-- Using **BeautifulSoup** and **Pandas**, is that Pandas uses can automatically pull all the tables separately and **all** of the information in those tables and displays it easily in the console. Also, for relay participants and splits for the athletes, Pandas pull that information when BeautifulSoup does not.
+- Using **BeautifulSoup** and **Pandas**, the difference is that Pandas can automatically pull all the tables separately and **all** of the information in those tables and displays it easily in the console. Also, for relay participants and splits for the athletes, Pandas pull that information when BeautifulSoup does not.
 
 BeautifulSoup:
 
